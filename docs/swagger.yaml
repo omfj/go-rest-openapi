@@ -89,6 +89,8 @@ paths:
           description: Failed to create post
           schema:
             type: string
+      security:
+      - BearerAuth: []
       summary: Create post
       tags:
       - posts
@@ -118,4 +120,10 @@ paths:
       summary: Get user posts
       tags:
       - posts
+securityDefinitions:
+  BearerAuth:
+    description: 'Enter your bearer token in the format: Bearer {token}'
+    in: header
+    name: Authorization
+    type: apiKey
 swagger: "2.0"

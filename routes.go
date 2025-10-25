@@ -105,6 +105,7 @@ type CreatePostBody struct {
 // @Failure      400   {string}  string  "Invalid request body"
 // @Failure      401   {string}  string  "Failed to authenticate"
 // @Failure      500   {string}  string  "Failed to create post"
+// @Security     BearerAuth
 // @Router       /posts [post]
 func (s *Server) handleCreatePost(w http.ResponseWriter, r *http.Request) {
 	auth, err := s.GetAuthFromRequest(r)

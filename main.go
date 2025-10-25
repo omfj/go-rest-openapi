@@ -16,6 +16,10 @@ import (
 // @description     A REST API for managing posts and users
 // @host            localhost:3000
 // @BasePath        /
+// @securityDefinitions.apikey BearerAuth
+// @in header
+// @name Authorization
+// @description Enter your bearer token in the format: Bearer {token}
 func main() {
 	if err := godotenv.Load(); err != nil {
 		log.Println("No .env file found")
